@@ -1,5 +1,7 @@
 :root {
     --light-grey: #dddddd;
+    --light-grey0: #eeeeee;
+    --grey0: #aaaaaa;
     --dark-green: #009578;
     --forest-green: #00af8c;
     --white: #ffffff;
@@ -46,3 +48,58 @@ body {
 .notes_add:hover {
     background: var(--forest-green);
 }
+
+.notes_list-item {
+    cursor: pointer;
+}
+
+.notes_list-item-selected { 
+    background: var(--light-grey0);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.notes-small-title, .notes_small-updated {
+    padding: 10px;
+}
+
+.notes_small-title {
+    font-size: 1.2em;
+}
+
+.notes_small-body {
+    padding: 0 10px;
+}
+
+.notes_small-updated {
+    color: var(--grey0);
+    font-style: italic;
+    text-align: right;
+}
+
+.notes_preview {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2em 3em;
+}
+
+.notes_title, .notes_body {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.notes_title {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.notes_body {
+    flex-grow: 1;
+    font-size: 1.3em;
+    line-height: 1.5;
+    margin-top: 2em;
+    resize: none;
+}
+
