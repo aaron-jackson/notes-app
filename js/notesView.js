@@ -77,4 +77,19 @@ export default class NotesView {
             });
         });
     }
+
+    updateActiveNote(note) {
+        this.root.querySelector(".notes_title").value = note.title;
+        this.root.querySelector(".note_body").value = note.body;
+
+        this.root.querySelectorAll(".note_list-item").forEach(noteListItem => {
+            noteListItem.classList.remove("notes_list-item-selected");
+        })
+
+        this.root.querySelector(`.note_list-item[data-note-id="${note.id}"]`).classList.add("notes_list-item-selected");
+    }
+
+    updateNotePreviewVisibility(visible) {
+        this.root.querySelector(".notes_preview").style.visibility = visible ? "visible" : "hidden";
+    }
 }
