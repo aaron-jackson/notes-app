@@ -1,5 +1,5 @@
-import NotesView from "./notesView.js";
-import NotesAPI from "./notesAPI.js";
+import NotesView from "/js/notesView.js";
+import NotesAPI from "/js/notesAPI.js";
 
 export default class App {
     constructor(root) {
@@ -38,7 +38,7 @@ export default class App {
             },
             onNoteAdd: () => {
                 const newNote = {
-                    title: "New Note",
+                    title: "Title",
                     body: "Take note..."
                 };
 
