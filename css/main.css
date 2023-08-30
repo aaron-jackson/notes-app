@@ -32,6 +32,13 @@ body {
     width: 400px;
 }
 
+.notes_sidebar h4 {
+    display: block;
+    font-size: 1.3em;
+    width: 100%;
+    height: auto;
+}
+
 .notes_add {
     background: var(--dark-green);
     border: none;
