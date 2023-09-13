@@ -8,7 +8,7 @@ export default class NotesView {
     this.root.innerHTML = `
         <div class="notes_sidebar">
             <button class="notes_add" type="button">Add Note</button>
-            <h4>*Double click to delete an item</h4>
+            <h4>*Double click to delete a note</h4>
             <div class="notes_list"></div>
         </div>
         <div class="notes_preview">
@@ -27,8 +27,8 @@ export default class NotesView {
 
     [inputTitle, inputBody].forEach(inputField => {
         inputField.addEventListener("blur", () => {
-            const updatedTitle = inputField.value.trim();
-            const updatedBody = inputField.value.trim();
+            const updatedTitle = inputTitle.value.trim();
+            const updatedBody = inputBody.value.trim();
 
             this.onNoteEdit(updatedTitle, updatedBody);
         });
